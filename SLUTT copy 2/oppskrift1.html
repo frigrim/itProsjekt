@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Ysabeau&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="oppskrift1.css">
+    <title>Pasta</title>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+          <a href="index.html">Mine favoritter</a>
+        </div>
+        <input type="checkbox" id="toggle">
+        <label for="toggle" class="toggle-button">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <div class="menu">
+          <ul>
+            <li><a href="index.html">Hjem</a></li>
+            <li><a href="./sideTo.html">Vegetar?</a></li>
+            <li><a href="sideTre.html">Dagens Middag</a></li>
+            <li><a href="oppskrift1.html">Enchiladas</a></li>
+            <li><a href="om.html">Om meg</a></li>
+          </ul>
+        </div>
+      </nav>
+    <main>
+        <div class="banner">
+            <h1>Enchiladas</h1>
+        </div>
+        <div class="item1">
+            <h2>Ingridienser:</h2>
+            <div class="input-container">
+            <label for="porsjoner" class="porsjoner">Porsjoner:</label>
+            <input
+            type="number"
+            id="porsjoner" 
+            name="porsjoner"
+            min="1"
+            max="25"
+            value="4" ><!-- local storage fungerer ikke -->
+            
+        </div>
+        <ul id="ingredienser">
+            <li><span class="mengde"></span> <span class="navn"></span></li> <!-- Span gjør at de kommer på samme linje, istedenfor å bruke div, span setter to innhold sammen -->
+            <li><span class="mengde"></span> <span class="navn"></span></li>
+            <li><span class="mengde"></span> <span class="navn"></span></li>
+            <li><span class="mengde"></span> <span class="navn"></span></li>
+            <li><span class="mengde"></span> <span class="navn"></span></li>
+            <li><span class="mengde"></span> <span class="navn"></span></li>
+
+           
+        </ul>
+        <h3>Saus: </h3>
+
+        <ul id="saus">
+            <li><span class="mengde"> </span> <span class="navn"></span></li>
+            <li><span class="mengde"></span> <span class="navn"></span></li>
+            <li><span class="mengde"></span> <span class="navn"></span></li>
+            <li><span class="mengde"></span> <span class="navn"></span></li>
+            <li><span class="mengde"></span> <span class="navn"></span></li>
+            <li><span class="mengde"></span> <span class="navn"></span></li>
+        </ul>
+    </div>
+
+ <div class="item2">
+    <h1> Oppskrift</h1>
+    <div class="recipe" id="oppskrift"></div>
+ </div>
+    </main>
+    
+<a href="./om.html" class="knappHøyre"> <i class="fa-solid fa-arrow-right"></i> </a>
+<a href="./sideTre.html" class="knappVenstre"><i class="fa-solid fa-arrow-left"></i></a>
+
+<script src="scriptO1 copy.js"></script>
+</body>
+</html>

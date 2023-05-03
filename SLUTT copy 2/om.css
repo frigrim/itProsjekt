@@ -1,0 +1,15 @@
+img{
+    padding-left: 60px;
+    width: 300px;
+    height: 200px;
+    margin-top: 20px;
+}
+
+/* Hvordan fikse dette */
+@media (max-width: 500px) {
+    .box{
+        border-left: none;
+    }
+    /* Hvordan få det til å funke */
+  
+}

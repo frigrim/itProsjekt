@@ -1,0 +1,118 @@
+:root{
+  --grønn: rgb(0,128,0);
+}
+:root{
+  --hvit: white; 
+}
+:root{
+  --mørkegrønn: rgb(40, 84, 48);
+}
+:root{
+  --lysegrønn:rgb(95, 141, 78);
+}
+:root{
+  --lysestgrønn:rgb(164, 190, 123);
+}
+:root{
+  --beige: rgb(229, 217, 182);
+}
+
+body{
+  background-color: var(--beige);
+  
+}
+h1 {
+    color: var(--lysegrønn);
+    font-size:40px ;
+    font-weight: bolder;
+    text-shadow: 0.5px 0.2px  black;
+}
+h2{
+  color: var(--mørkegrønn);
+  text-shadow: 1px 1px 1px  black;
+
+}
+ .underOverskrift{
+  padding-top: 50px;
+  text-align: center;
+}
+
+.cover{
+    width: 100%;
+   height: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cover .box{
+    background-color: var(--lysegrønn);
+    width: 450px;
+    height: 550px;
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+    color: black;
+    transition: 0.5s;
+    border-left: 10px solid var(--beige);
+   
+  }
+  /* Hvorfor er box_3 større? */
+  .cover .box:hover{
+    background: var(--mørkegrønn);
+    color: var(--hvit);
+  
+  }
+  .cover .box:hover h2{
+    color: white;
+  }
+  img{
+    width: 400px;
+    height: 300px;
+    margin-top: 20px;
+ }
+  
+ 
+  .info{
+    padding: 10px;
+    align-items: center;
+    justify-content:center;
+    text-align: left;
+    font-size: 20px;
+
+  }
+  .liste{
+    text-align: left;
+    font-size: 20px;
+    font-family: 'Ysabeau', sans-serif;
+
+   
+  }
+.liste2{
+  text-align: left;
+    font-size: 20px;
+    font-family: 'Ysabeau', sans-serif;
+
+    
+}
+
+.lesmer a:link{
+  text-decoration: none;
+}
+@media (max-width: 500px) {
+  .underOverskrift{
+    padding-top: 90px;
+  }
+  .box{
+    border-top: 5px solid var(--beige);
+    border-left: 0px;
+  }
+  #bok_3{
+    border-right: 0px; /* Fungerer ikke */
+  }
+  .cover{
+    flex-direction: column;
+    
+}
+ 
+}
+

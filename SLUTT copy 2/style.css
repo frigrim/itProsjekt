@@ -1,0 +1,204 @@
+/* Lager jeg farger jeg reffererer til overalt ellers i koden */
+:root{
+  --grønn: rgb(0,128,0);
+}
+:root{
+  --hvit: white; 
+}
+:root{
+  --mørkegrønn1: rgb(1, 74, 1);
+}
+
+:root{
+  --mørkegrønn: rgb(40, 84, 48);
+}
+:root{
+  --lysegrønn:rgb(95, 141, 78);
+}
+:root{
+  --lysestgrønn:rgb(164, 190, 123);
+}
+:root{
+  --beige: rgb(229, 217, 182);
+}
+/* Bruker samme bakgrunnsfarge */
+body{
+  background-color: var(--beige);
+
+}
+
+
+.knappHøyre{
+ position:fixed; /* Endres ikke dersom det scrolles */
+  right: 30px;
+  bottom: 0px;
+text-decoration: none; 
+  font-size: 70px;
+  color: var(--lysegrønn);
+  text-shadow: 2px 2px 2px black; 
+
+}
+.knappVenstre{
+  position: fixed; 
+   left: 0px;
+   bottom: 0px;
+ text-decoration: none; 
+   font-size: 70px;
+   color: var(--lysegrønn);
+   text-shadow: 2px 2px 2px black; 
+ }
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+  }
+
+  
+  nav {
+    background-color: var(--lysegrønn);
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px; /* Flytter navnet mot midten */
+    position: relative;
+  }
+
+  
+  .logo a {
+    color: var(--hvit);
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    text-decoration: none;
+  }
+  
+/* Er skjult */
+  .menu {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: var(--mørkegrønn);
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+  transition: all 0.5s ease-in-out; /* Etter klikk tar det 0,5s før den kommer */
+  }
+  
+  .menu ul {
+list-style: none; /* Fjerner prikker forann listen */
+    display: flex;
+  }
+  
+  .menu ul li {
+    margin: 0 20px;
+ }
+  
+  .menu ul li a {
+    color: var(--hvit);
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Playfair Display', serif;
+  }
+
+  .menu ul li a:hover{
+    color: var(--lysestgrønn);
+
+  }
+
+   /* Hamburgermenyen*/
+  .toggle-button {
+    position: absolute;
+    top: 25px;
+    right: 50px; /* absolute, top og rigt setter den øverst i høyre hjørne */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer; /*  endrer muspekereffekten til å indikere at knappen kan trykkes på */
+
+  }
+  /*Span er strekene i meny knappen*/
+  .toggle-button span {
+    height: 4px;
+    background-color: var(--hvit);
+    transition: all 0.5s ease-in-out;
+  }
+/*Gjør at man ikke ser checkboxen som er et avkrytningsfelt*/
+  #toggle{
+    display:none;
+  }
+  /* Dersom toggle er checked vises .menu */
+  #toggle:checked ~ .menu {
+    opacity: 1;
+    visibility: visible;
+    top: 80px;
+  }
+  
+  /*Gjør at det blir formet til et kryss*/
+  /* Første child av span peker nedover og blir flyttet 10px nedover  */
+  #toggle:checked ~ .toggle-button span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+  
+  /*Den miderste streken forsvinner*/
+  #toggle:checked ~ .toggle-button span:nth-child(2) {
+    opacity: 0;
+  }
+  /*Strek som peker oppover og blir flyttet 10px oppover*/
+  /* roteres 45 grader mot klokka */
+  #toggle:checked ~ .toggle-button span:nth-child(3) {
+    transform:  translateY(-10px) rotate(-45deg);
+  }
+
+
+h1{
+    padding-top: 40px;
+}
+
+.content{
+  background-image: url("Bilder/forsideMiddag.jpeg");
+  width:100%;
+  height: 90%;
+  background-attachment:fixed; /* Endres ikke dersom det scrolles */
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center; /* Gjør at navnet blir på midten */
+  padding: 0;
+  border:0; 
+  margin:0;
+  min-height: 100vh; /* Får med hele bildet */
+  }
+  
+  
+  
+  .content h1{
+    margin:0;
+    padding-top: 120px; /* Flytter teksten nedover */
+    font-size: 100px;
+    color: var(--hvit);
+    font-weight: 600; 
+   color: var(--hvit);
+  text-shadow: 1px 1px 2px black;
+  }
+
+@media (max-width: 500px) {
+/* Menu ul er det som står i navbaren av alternativene du kan trykke på*/
+/* Går vertikalt nedover i stedenfor horisontalt */
+  .menu ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    
+  }
+
+}
+
+
